@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>אבן, נייר ומספריים</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" class="game-shell">
+    <header class="hero">
+      <p class="eyebrow">משחק מהיר</p>
+      <h1>אבן, נייר ומספריים</h1>
+      <p class="subtitle">בחרו מהלך, ותנו למזל לעבוד.</p>
+    </header>
+
+    <section class="scoreboard" aria-label="לוח תוצאות">
+      <div class="score-card player-score"><span>אתם</span><strong id="player-score">0</strong></div>
+      <div class="rounds"><span>סיבוב</span><strong id="round-number">1</strong></div>
+      <div class="score-card computer-score"><span>המחשב</span><strong id="computer-score">0</strong></div>
+    </section>
+
+    <section class="arena" aria-live="polite">
+      <div class="move-display"><span class="move-label">המהלך שלכם</span><span class="move-icon" id="player-move">?</span></div>
+      <div class="versus">VS</div>
+      <div class="move-display"><span class="move-label">המהלך של המחשב</span><span class="move-icon" id="computer-move">?</span></div>
+    </section>
+
+    <p class="result" id="status">בחרו מהלך כדי להתחיל</p>
+
+    <section class="choices" aria-label="בחירת מהלך">
+      <button class="choice" type="button" data-move="rock" aria-label="אבן"><span aria-hidden="true">✊</span><small>אבן</small></button>
+      <button class="choice" type="button" data-move="paper" aria-label="נייר"><span aria-hidden="true">✋</span><small>נייר</small></button>
+      <button class="choice" type="button" data-move="scissors" aria-label="מספריים"><span aria-hidden="true">✌️</span><small>מספריים</small></button>
+    </section>
+    <button class="reset" type="button" id="reset-game">איפוס משחק</button>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
